@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <input type="text" class="calcDisplay" name="display" />
+      </div>
+      <div class="buttons-container">
+        <div class="buttons">
+          <div class="row1">
+            <input
+              class="btn"
+              type="button"
+              value="1"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn"
+              type="button"
+              value="2"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn"
+              type="button"
+              value="3"
+              onclick="displayClick(this.value)"
+            />
+          </div>
+          <div class="row2">
+            <input
+              class="btn"
+              type="button"
+              value="4"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn"
+              type="button"
+              value="5"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn"
+              type="button"
+              value="6"
+              onclick="displayClick(this.value)"
+            />
+          </div>
+          <div class="row3">
+            <input
+              class="btn"
+              type="button"
+              value="7"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn"
+              type="button"
+              value="8"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn"
+              type="button"
+              value="9"
+              onclick="displayClick(this.value)"
+            />
+          </div>
+          <div class="row4">
+            <input
+              class="btn"
+              type="button"
+              value="0"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn-zero"
+              type="button"
+              value="00"
+              onclick="displayClick(this.value)"
+            />
+
+            <input
+              class="btn-dot"
+              type="button"
+              value="."
+              onclick="displayClick(this.value)"
+            />
+
+            <!-- <button class="btn-Ac" type="submit">ON/AC</button> -->
+          </div>
+        </div>
+        <div class="arithemetic-buttons">
+          <div class="row-a">
+            <button class="arith-btn plus" onclick="display.value +='+'">
+              +
+            </button>
+            <button class="arith-btn" onclick="display.value +='-'">-</button>
+          </div>
+          <div class="row-b">
+            <button class="arith-btn" onclick="display.value +='*'">x</button>
+            <button class="arith-btn" onclick="display.value +='/'">/</button>
+          </div>
+          <div class="row-c">
+            <button class="arith-btn" onclick="display.value +='%'">%</button>
+            <button class="arith-btn" onclick="display.value =power(2)(display.value)">x2</button>
+          </div>
+          
+          <div class="row-d">
+            <button
+              class="clr-btn"
+              onclick="display.value=''"
+            >
+            AC/ON
+            </button>
+            <input
+            value="DEL"
+            class="del-btn"
+            type="button"
+            onclick="display.value=display.value.toString().slice(0,-1)"
+          />
+          
+        </div>
+        <div class="row-e">
+            <button
+              class="equal-btn"
+              onclick="display.value=(display.value)?eval(display.value):''"
+            >
+              =
+            </button>
+        
+            
+          </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
